@@ -9,9 +9,9 @@ int main()
 	scanf("%d", &input);
 
 	for (int i = 1; i < input; i++)
-		(i % 3 == 0 || i % 5 == 0) ? sum += i : 0;
+		(input % i == 0) ? sum += i : 0;
 
-	printf("3 또는 5의 배수를 더한 합은 %d입니다.\n", sum);
+	(sum == input) ? printf("%d는 완전수입니다.\n", input) : printf("%d는 완전수가 아닙니다.\n", input);
 
 	return 0;
 }
