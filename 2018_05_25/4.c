@@ -3,17 +3,14 @@
 int main()
 {
 	int iNum;
-	int *piNum;
+	int *piNum = &iNum;
 	double dNum;
-	double *pdNum;
+	double *pdNum = &dNum;
 
 	printf("정수 입력 : ");
-	scanf("%d", &iNum);
+	scanf("%d", piNum);
 	printf("실수 입력 : ");
-	scanf("%lf", &dNum);
-
-	piNum = &iNum;
-	pdNum = &dNum;
+	scanf("%lf", pdNum);
 
 	printf("포인터를 이용하여 정수형 변수와 실수형 변수의 곱 : %f\n", (*piNum) * (*pdNum));
 
