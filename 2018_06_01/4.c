@@ -6,7 +6,7 @@ void minmax(int *arr, int size, int *min, int *max)
 
 	for (i = 0; i < size; i++)
 	{
-		if (arr[i] > *max)
+		if (*(arr+i) > *max)
 			*max = *(arr + i);
 
 		else
