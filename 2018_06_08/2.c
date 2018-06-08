@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int fib(int n)
 {
@@ -14,12 +15,7 @@ int main()
 	int i;
 
 	for (int i = 1; i <= 10; i++)
-	{
-		if (i % 2 == 0)
-			printf("%d항 : %d\n", i, -fib(i));
+		printf("%d항 : %.0lf\n", i, pow(-1, i + 1) * fib(i));
 
-		else
-			printf("%d항 : %d\n", i, fib(i));
-	}
 	return 0;
 }

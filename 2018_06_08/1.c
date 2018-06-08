@@ -1,17 +1,17 @@
 #include <stdio.h>
 
+int min(int x, int y)
+{
+	return (x < y) ? x : y;
+}
+
 int minArray(int arr[], int size)
 {
-	int i;
-	int min = arr[0];
+	if (size == 1)
+		return arr[0];
 
-	for (i = 0; i < size; i++)
-	{
-		if (arr[i] < min)
-			min = arr[i];
-	}
-
-	return min;
+	else
+		return min(arr[size - 1], minArray(arr, size - 1));
 }
 
 int main()
